@@ -1,0 +1,16 @@
+
+{% extends "cfstack/base.html" %}
+{% block content %}
+<div id="stacklist">
+
+<ul>
+{%  for stackname in stacks %}
+<li><a href="{% url 'stack_detail_url' stack_file_name=stackname %}">
+       {{ stackname }}
+    </a>
+</li>
+{% endfor %}
+</ul>
+
+</div>
+{% endblock %}

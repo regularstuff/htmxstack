@@ -1,0 +1,144 @@
+{
+    "StackResourceSummaries": [
+        {
+            "LogicalResourceId": "BatchServiceRole",
+            "PhysicalResourceId": "regular-hello-world-batch-stack-BatchServiceRole-iy940Pqgc04Z",
+            "ResourceType": "AWS::IAM::Role",
+            "LastUpdatedTimestamp": "2024-01-14T18:02:59.035000+00:00",
+            "ResourceStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackResourceDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "LogicalResourceId": "ComputeEnvironment",
+            "PhysicalResourceId": "arn:aws:batch:us-east-2:028190796253:compute-environment/ComputeEnvironment-SplsPXw47niIAFig",
+            "ResourceType": "AWS::Batch::ComputeEnvironment",
+            "LastUpdatedTimestamp": "2024-01-14T18:05:19.720000+00:00",
+            "ResourceStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackResourceDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "LogicalResourceId": "EcsInstanceRole",
+            "PhysicalResourceId": "regular-hello-world-batch-stack-EcsInstanceRole-anwrFEcl37Hg",
+            "ResourceType": "AWS::IAM::Role",
+            "LastUpdatedTimestamp": "2024-01-14T18:02:59.049000+00:00",
+            "ResourceStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackResourceDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "LogicalResourceId": "IamInstanceProfile",
+            "PhysicalResourceId": "regular-hello-world-batch-stack-IamInstanceProfile-PRbi1PytUg1R",
+            "ResourceType": "AWS::IAM::InstanceProfile",
+            "LastUpdatedTimestamp": "2024-01-14T18:05:11.890000+00:00",
+            "ResourceStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackResourceDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "LogicalResourceId": "InternetGateway",
+            "PhysicalResourceId": "igw-0d38a44f760493d99",
+            "ResourceType": "AWS::EC2::InternetGateway",
+            "LastUpdatedTimestamp": "2024-01-14T18:02:58.358000+00:00",
+            "ResourceStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackResourceDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "LogicalResourceId": "JobDefinition",
+            "PhysicalResourceId": "arn:aws:batch:us-east-2:028190796253:job-definition/JobDefinition-kqQrfK5NeBo9e5g0:1",
+            "ResourceType": "AWS::Batch::JobDefinition",
+            "LastUpdatedTimestamp": "2024-01-14T18:02:45.798000+00:00",
+            "ResourceStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackResourceDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "LogicalResourceId": "JobQueue",
+            "PhysicalResourceId": "arn:aws:batch:us-east-2:028190796253:job-queue/JobQueue-gMaczGsHig9moeVv",
+            "ResourceType": "AWS::Batch::JobQueue",
+            "LastUpdatedTimestamp": "2024-01-14T18:05:27.378000+00:00",
+            "ResourceStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackResourceDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "LogicalResourceId": "Route",
+            "PhysicalResourceId": "rtb-097ce9ddb9bc6b6c3|0.0.0.0/0",
+            "ResourceType": "AWS::EC2::Route",
+            "LastUpdatedTimestamp": "2024-01-14T18:03:09.600000+00:00",
+            "ResourceStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackResourceDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "LogicalResourceId": "RouteTable",
+            "PhysicalResourceId": "rtb-097ce9ddb9bc6b6c3",
+            "ResourceType": "AWS::EC2::RouteTable",
+            "LastUpdatedTimestamp": "2024-01-14T18:03:06.787000+00:00",
+            "ResourceStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackResourceDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "LogicalResourceId": "SecurityGroup",
+            "PhysicalResourceId": "sg-042c9f3b4d0c6c9c9",
+            "ResourceType": "AWS::EC2::SecurityGroup",
+            "LastUpdatedTimestamp": "2024-01-14T18:03:00.482000+00:00",
+            "ResourceStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackResourceDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "LogicalResourceId": "Subnet",
+            "PhysicalResourceId": "subnet-0645f2304e5510229",
+            "ResourceType": "AWS::EC2::Subnet",
+            "LastUpdatedTimestamp": "2024-01-14T18:02:59.158000+00:00",
+            "ResourceStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackResourceDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "LogicalResourceId": "SubnetRouteTableAssociation",
+            "PhysicalResourceId": "rtbassoc-089abe2b69fcbe241",
+            "ResourceType": "AWS::EC2::SubnetRouteTableAssociation",
+            "LastUpdatedTimestamp": "2024-01-14T18:03:09.676000+00:00",
+            "ResourceStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackResourceDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "LogicalResourceId": "VPC",
+            "PhysicalResourceId": "vpc-0ddc8441955cff1be",
+            "ResourceType": "AWS::EC2::VPC",
+            "LastUpdatedTimestamp": "2024-01-14T18:02:54.220000+00:00",
+            "ResourceStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackResourceDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "LogicalResourceId": "VPCGatewayAttachment",
+            "PhysicalResourceId": "IGW|vpc-0ddc8441955cff1be",
+            "ResourceType": "AWS::EC2::VPCGatewayAttachment",
+            "LastUpdatedTimestamp": "2024-01-14T18:03:02.165000+00:00",
+            "ResourceStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackResourceDriftStatus": "NOT_CHECKED"
+            }
+        }
+    ]
+}

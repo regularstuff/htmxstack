@@ -1,0 +1,104 @@
+{
+    "StackResourceSummaries": [
+        {
+            "LogicalResourceId": "AthenaOutputS3Bucket",
+            "PhysicalResourceId": "aws-athena-dbt-glue-query-results-028190796253-us-east-2",
+            "ResourceType": "AWS::S3::Bucket",
+            "LastUpdatedTimestamp": "2024-01-14T18:35:05.948000+00:00",
+            "ResourceStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackResourceDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "LogicalResourceId": "AthenaWorkGroup",
+            "PhysicalResourceId": "athena-dbt-glue-aws-blog",
+            "ResourceType": "AWS::Athena::WorkGroup",
+            "LastUpdatedTimestamp": "2024-01-14T18:34:39.720000+00:00",
+            "ResourceStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackResourceDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "LogicalResourceId": "CreatePartitionsFunction",
+            "PhysicalResourceId": "dbt-regularstuff-demo_dbt_glue_blog_partitions_creator",
+            "ResourceType": "AWS::Lambda::Function",
+            "LastUpdatedTimestamp": "2024-01-14T18:35:21.038000+00:00",
+            "ResourceStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackResourceDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "LogicalResourceId": "CreatePartitionsFunctionPolicy",
+            "PhysicalResourceId": "arn:aws:iam::028190796253:policy/dbt-regularstuff-demo-CreatePartitionsFunctionPolicy-FPBXYKoKg05k",
+            "ResourceType": "AWS::IAM::ManagedPolicy",
+            "LastUpdatedTimestamp": "2024-01-14T18:34:54.417000+00:00",
+            "ResourceStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackResourceDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "LogicalResourceId": "CreatePartitionsFunctionRole",
+            "PhysicalResourceId": "dbt-regularstuff-demo-CreatePartitionsFunctionRole-3fLEucR62RPO",
+            "ResourceType": "AWS::IAM::Role",
+            "LastUpdatedTimestamp": "2024-01-14T18:35:11.954000+00:00",
+            "ResourceStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackResourceDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "LogicalResourceId": "DatalakeOutputS3Bucket",
+            "PhysicalResourceId": "aws-dbt-glue-datalake-028190796253-us-east-2",
+            "ResourceType": "AWS::S3::Bucket",
+            "LastUpdatedTimestamp": "2024-01-14T18:35:06.487000+00:00",
+            "ResourceStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackResourceDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "LogicalResourceId": "IamGlueRole",
+            "PhysicalResourceId": "GlueInteractiveSessionRole",
+            "ResourceType": "AWS::IAM::Role",
+            "LastUpdatedTimestamp": "2024-01-14T18:34:57.238000+00:00",
+            "ResourceStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackResourceDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "LogicalResourceId": "PartitionsCreator",
+            "PhysicalResourceId": "2024/01/14/[$LATEST]ac2a928bc2c14512be39273453d1c3e9",
+            "ResourceType": "Custom::PartitionsCreator",
+            "LastUpdatedTimestamp": "2024-01-14T18:35:24.671000+00:00",
+            "ResourceStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackResourceDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "LogicalResourceId": "TaxiDB",
+            "PhysicalResourceId": "nyctaxi",
+            "ResourceType": "AWS::Glue::Database",
+            "LastUpdatedTimestamp": "2024-01-14T18:34:39.112000+00:00",
+            "ResourceStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackResourceDriftStatus": "NOT_CHECKED"
+            }
+        },
+        {
+            "LogicalResourceId": "TaxiTable",
+            "PhysicalResourceId": "records",
+            "ResourceType": "AWS::Glue::Table",
+            "LastUpdatedTimestamp": "2024-01-14T18:34:40.467000+00:00",
+            "ResourceStatus": "CREATE_COMPLETE",
+            "DriftInformation": {
+                "StackResourceDriftStatus": "NOT_CHECKED"
+            }
+        }
+    ]
+}
