@@ -22,7 +22,7 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("cfstack", views.stack),
+    path("butt", views.butt),
     path("stack_resources/<str:stack_file_name>/", views.stack_contents_view, name="stack_detail_url"),
     path("stacklist", views.list_stacks_view),
-    path("", views.list_stacks_view)
 ]
