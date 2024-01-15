@@ -1,16 +1,22 @@
 
 {% extends "cfstack/base.html" %}
 {% block content %}
-<div id="stacklist">
+<div class="page-wrapper">
 
-<ul>
-{%  for stackname in stacks %}
-<li><a href="{% url 'stack_detail_url' stack_file_name=stackname %}">
-       {{ stackname }}
-    </a>
-</li>
-{% endfor %}
-</ul>
-
-</div>
+    <div class="row">
+        <div id="stacklist" class="column" hx-boost="true">
+            <ul>
+            {%  for stackname in stacks %}
+            <li hx-get="/stack-synopsis/{{ stackname }}" hx-trigger="mouseenter" hx-target="#stack-details"><a href="{% url 'stack_detail_url' stack_file_name=stackname %}">
+               {{ stackname }}
+            </a>
+            </li>
+            {% endfor %}
+            </ul>
+        </div>
+        <div id="stack-details" class="column"</div>
+        
+    </div>
+    
+</div>    
 {% endblock %}

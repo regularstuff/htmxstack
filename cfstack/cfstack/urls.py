@@ -24,5 +24,10 @@ urlpatterns = [
     path("cfstack", views.stack),
     path("stack_resources/<str:stack_file_name>/", views.stack_contents_view, name="stack_detail_url"),
     path("stacklist", views.list_stacks_view),
-    path("", views.list_stacks_view)
 ]
+
+htmx_swap_url_pattens = [
+    path('stack-synopsis/<str:stack_file_name>', views.htmx_stack_snyopsis_view, name='frag_stack_snyopsis')
+]
+
+urlpatterns += htmx_swap_url_pattens

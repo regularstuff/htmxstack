@@ -2,9 +2,11 @@ import json
 import pathlib
 import pprint
 
-from django.http import  HttpResponse
+from django.http import HttpResponse
 from django.shortcuts import render
 from django.conf import settings
+
+from . import aws_utils
 
 def stack(request):
     dummy_stack_overview = """<UL><LI><a href="#">Resource 1</a></LI>
@@ -16,10 +18,8 @@ def stack(request):
                        page_title="This Title Seems Good Enough"),
                   )
 def list_stacks_view(request):
-    base_dir = settings.BASE_DIR
-    stacks_path = pathlib.Path(base_dir, "aws_mock_stacks")
-    pagedata = dict(title="CF Stacks",
-                    stacks=[file.name for file in stacks_path.glob("*json")])
+    pagedata = dict(page_title="whatever",
+                    stacks=aws_utils.get_stack_names())
     return render(request,
                   template_name="cfstack/stacklist.html",
                   context=pagedata)
@@ -36,3 +36,6 @@ def stack_contents_view(request, stack_file_name):
 
 
 
+def htmx_stack_snyopsis_view(request, stack_file_name):
+    return render(request, "cfstack/htmlpart_stack_synopsis.html",
+                  context=dict(stack_name=stack_file_name))
