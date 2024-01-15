@@ -8,22 +8,12 @@ from django.conf import settings
 
 from . import aws_utils
 
-def stack(request):
-    dummy_stack_overview = """<UL><LI><a href="#">Resource 1</a></LI>
-    <LI><a href="#">Resource 1</a></LI>
-    <LI><a href="#">Resource 1</a></LI>
-     """
-    return render(request, "cfstack/cfstack.html",
-                  dict(stack_overview=dummy_stack_overview,
-                       page_title="This Title Seems Good Enough"),
-                  )
 def list_stacks_view(request):
     pagedata = dict(page_title="whatever",
                     stacks=aws_utils.get_stack_names())
     return render(request,
                   template_name="cfstack/stacklist.html",
                   context=pagedata)
-
 
 def stack_contents_view(request, stack_file_name):
     base_dir = settings.BASE_DIR
@@ -33,9 +23,11 @@ def stack_contents_view(request, stack_file_name):
         return HttpResponse(pprint.pformat(json.load(jsonstuff)))
 
 
-
-
-
 def htmx_stack_snyopsis_view(request, stack_file_name):
+    stack_def = aws_utils.get_stack_as_dict(stack_file_name)
+    resource_count = len(stack_def["StackResourceSummaries"])
+    resource_names = [resource["LogicalResourceId"] for resource in stack_def["StackResourceSummaries"]]
     return render(request, "cfstack/htmlpart_stack_synopsis.html",
-                  context=dict(stack_name=stack_file_name))
+                  context=dict(stack_name=stack_file_name,
+                               resource_count=resource_count,
+                               resource_names=resource_names))

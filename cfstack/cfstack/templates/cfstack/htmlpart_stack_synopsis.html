@@ -1,4 +1,11 @@
 <div id="stack-details">
     <h2>{{ stack_name }}</h2>
-    <p>I would have a message here!</p>
+    <p>{{ resource_count }} Resources</p>
+    <div class="stack_resource_logical_names">
+    <ul>
+    {% for name in resource_names  %}
+    <li>{{ name }}</li>
+        {% endfor %}
+    </ul>
+    </div>
 </div>
