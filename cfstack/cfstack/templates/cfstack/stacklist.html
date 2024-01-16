@@ -5,14 +5,27 @@
 
     <div class="row">
         <div id="stacklist" class="column" hx-boost="true">
+            <div id="stack_list_top" hx-get="/emptydiv/stack-details" hx-trigger="mouseleave" hx-target="#stack-details">
+            - - - - a line or whatever - - - -
+            </div>
+
             <ul>
             {%  for stackname in stacks %}
-            <li hx-get="/stack-synopsis/{{ stackname }}" hx-trigger="mouseenter" hx-target="#stack-details"><a href="{% url 'stack_detail_url' stack_file_name=stackname %}">
+            
+                
+                    
+            <li hx-get="/stack-synopsis/{{ stackname }}" hx-trigger="mouseenter" hx-target="#stack-details">
+                <a href="{% url 'stack_detail_url' stack_file_name=stackname %}">
                {{ stackname }}
             </a>
             </li>
             {% endfor %}
             </ul>
+        
+            <div id="stack_list_bottom" hx-get="/emptydiv/stack-details" hx-trigger="mouseleave" hx-target="#stack-details">
+                - - - - a line or whatever - - - -
+            </div>        
+
         </div>
         <div id="stack-details" class="column"</div>
         

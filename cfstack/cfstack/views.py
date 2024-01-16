@@ -23,7 +23,7 @@ def stack_contents_view(request, stack_file_name):
         return HttpResponse(pprint.pformat(json.load(jsonstuff)))
 
 
-def htmx_stack_snyopsis_view(request, stack_file_name):
+def htmx_stack_synopsis_view(request, stack_file_name):
     stack_def = aws_utils.get_stack_as_dict(stack_file_name)
     resource_count = len(stack_def["StackResourceSummaries"])
     resource_names = [resource["LogicalResourceId"] for resource in stack_def["StackResourceSummaries"]]
@@ -31,3 +31,6 @@ def htmx_stack_snyopsis_view(request, stack_file_name):
                   context=dict(stack_name=stack_file_name,
                                resource_count=resource_count,
                                resource_names=resource_names))
+
+def emptydiv(request, div_id):
+    return HttpResponse(f"<div id='#{div_id}'>")

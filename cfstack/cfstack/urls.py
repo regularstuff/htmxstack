@@ -27,7 +27,8 @@ urlpatterns = [
 ]
 
 htmx_swap_url_pattens = [
-    path('stack-synopsis/<str:stack_file_name>', views.htmx_stack_snyopsis_view, name='frag_stack_snyopsis')
+    path("emptydiv/<str:div_id>/", views.emptydiv, name="htmtpart_emptydiv"),
+    path('stack-synopsis/<str:stack_file_name>', views.htmx_stack_synopsis_view, name='htmlpart_stack_synopsis')
 ]
 
 urlpatterns += htmx_swap_url_pattens
